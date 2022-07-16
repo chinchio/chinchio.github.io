@@ -1,0 +1,61 @@
+<!doctype html><html lang=zh-tw><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Chinchio Blog"><meta property="og:type" content="article"><meta property="og:image" content="https://chinchio.github.io//img/home-bg-jeep.jpg"><meta property="twitter:image" content="https://chinchio.github.io//img/home-bg-jeep.jpg"><meta name=title content="將Hugo網站放置在github page上"><meta property="og:title" content="將Hugo網站放置在github page上"><meta property="twitter:title" content="將Hugo網站放置在github page上"><meta name=description content="教你如何建立自己的website"><meta property="og:description" content="教你如何建立自己的website"><meta property="twitter:description" content="教你如何建立自己的website"><meta property="twitter:card" content="summary"><meta name=keyword content="Program, Game"><link rel="shortcut icon" href=/img/favicon.ico><title>將Hugo網站放置在github page上 | Chinchio Blog</title><link rel=canonical href=/post/2022-7-16-host-hugo-on-github/><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css><link rel=stylesheet href=/css/zanshang.css><link href=https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Chinchio Blog</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>All Posts</a></li><li><a href=/categories/tech>tech</a></li><li><a href=/archive/>ARCHIVE</a></li><li><a href=/notes/>NOTES</a></li><li><a href=/about/>ABOUT</a></li><li><a href=/search><i class="fa fa-search"></i></a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic);function handleMagic(){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(https://images.unsplash.com/photo-1578728281593-a06405bf2c8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/tags/hugo title=Hugo>Hugo</a>
+<a class=tag href=/tags/github title=Github>Github</a>
+<a class=tag href=/tags/github-actions title="Github Actions">Github Actions</a>
+<a class=tag href=/tags/git title=Git>Git</a>
+<a class=tag href=/tags/github-pages title="Github Pages">Github Pages</a></div><h1>將Hugo網站放置在github page上</h1><h2 class=subheading>想要擁有屬於自己的website嗎？</h2><span class=meta>Posted by
+chinchio
+on
+Saturday, July 16, 2022</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+post-container"><h1 id=緣由>緣由</h1><p>用hugo建一個blog，把自己的學到的東西都寫上去，把他當作是學習日記好了</p><hr><h1 id=install>Install</h1><h2 id=git>Git</h2><p>這個不用多說吧，直接在Git官網下載然後安裝即可</p><h2 id=hugo-for-windows>Hugo for Windows</h2><p>進入這個<a href=https://github.com/gohugoio/hugo/releases>hugo release</a>網站
+我個人是偏好是下載binary檔案然後放在env path裏面，如果不喜歡也可以到<a href=https://gohugo.io/getting-started/installing/>hugo installing</a>
+跟隨官方步驟使用<code>Chocolatey</code>來以command line的方式安裝<code>hugo</code></p><h3 id=下載hugo-binary>下載hugo binary</h3><p><img src=https://i.imgur.com/Z7WYjP9.png alt="Hugo Github release page">
+因為我是要在<code>Windows x64</code>上面使用
+所以在這裏我會下載<code>hugo_0.101.0_Windows-64bit.zip</code>
+其他人按照自己的系統版本選擇吧！</p><h3 id=解壓縮並設定path>解壓縮並設定path</h3><p><img src=https://i.imgur.com/NS4MV9A.png alt="open hugo_0.101.0_Windows-64bit.zip with 7zip">
+打開<code>hugo_0.101.0_Windows-64bit.zip</code>後
+可以看到裏面有三個檔案
+我們需要的就只有<code>hugo.exe</code>
+我個人習慣是把這些binary file（如ffmpeg)等都放在<code>C:\Program Files\&lt;program_name></code>裏面
+打開Environment Variable的設定工具
+<img src=https://i.imgur.com/WFyRm5v.png alt="system path">
+把hugo的path加到path裏面去
+<img src=https://i.imgur.com/XWUsXoP.png alt="add hugo path as value to system variable &amp;gt; path"></p><h3 id=測試是否正常>測試是否正常</h3><p>然後打開<code>terminal</code>，直接輸入<code>hugo version</code>看看有正確輸出hugo version相關msg
+如果沒有那可能你設定path時出錯了
+<img src=https://i.imgur.com/a8B7VpD.png alt="excute <code>hugo version</code> on powershell"></p><hr><h1 id=github-page>Github page</h1><h2 id=github-page引言>Github page引言</h2><p><a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/>Host on GitHub | Hugo</a>
+要把網頁架設在Github上就會用到<code>GitHub Pages</code>(廢話)</p><p>之前我也曾經在其他Github account用hugo作為blog
+那時只需要把生成的html && image && css %% js push到<code>main</code> branch即可</p><p>但如果跟隨hugo的tutorial是利用<code>Github Actions</code>讓Github自動把你寫好的<code>*.md</code>生成web page並把該生成的檔案放在<code>gh-pages</code>這條branch上</p><p>所以才會用到<code>gh-pages</code>的branch (我猜，如果有寫錯的話可以在留言區提醒 如果我有弄留言區的話 XD)</p><p>因為時間關係（誤），我已經把以username建立的repo建立好，那現在先把該repo clone 到 local再說吧
+<img src=https://i.imgur.com/kg6ZBbA.png alt="clone github repo"></p><blockquote><p>如果不知道為甚麼要把repo命名為<code>xxx.github.io</code>，可以參考<a href=https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site>Github|Github Pages</a>裏面有說明</p></blockquote><h2 id=hugo-newsite>hugo newsite</h2><p>當然你要先用hugo建立一個網站才可以讓github幫你托管網頁，所以跟隨官方tutorial <a href=https://gohugo.io/getting-started/installing/#2-run-the-command>Windows run command hugo new site</a></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>hugo new site &lt;newsite&gt;
+</span></span></code></pre></div><p>然後再去<a href=https://themes.gohugo.io/>hugo themes</a>下載你喜歡的主題，安裝主題及裏面的<code>exampleSite</code>不懂請參考其他的教學</p><blockquote><p>但要注意如果你是直接把hugo themes的theme git clone下來，
+有機會會在github actions的步驟裏有
+<code>fatal: No url found for submodule path 'themes/hugo-theme-cleanwhite' in .gitmodules</code>
+的error，所以要把theme裏面的.git刪除掉</p></blockquote><p>如果你安裝主題沒有出任何錯的話應該可以在 <code>&lt;newsite></code> folder 下指令</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>hugo server
+</span></span></code></pre></div><p>應該就可以看到像這樣類似的畫面
+<img src=https://i.imgur.com/u7Rg1Yn.png alt="hugo run server demo"></p><p>最後把<code>&lt;newsite></code>的檔案放在剛才clone下來的repo的folder裏面(像下圖)
+<img src=https://i.imgur.com/knDCCbC.png alt="put hugo file to repo"></p><h2 id=使用github-actions>使用Github Actions</h2><p>做完以上的步驟，接下來學官方的教學新增一個 <code>gh-pages.yml</code> 來讓github生成webpage到<code>gh-pages</code> branch裏面
+<a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action>Build Hugo With GitHub Action</a>
+<img src=https://i.imgur.com/n3erE6e.png alt="create gh-pages.yml to .github/workflows/ folder">
+好了 完成上述步驟 就來上傳github的三步曲<code>add</code>, <code>commit</code>還有 <code>push</code>
+你<code>push</code>完後應該可以在github actions有以下的畫面
+<img src=https://i.imgur.com/Odqp1LI.png alt="github action">
+(All green is good!)</p><h2 id=來一個結尾>來一個結尾</h2><p>好了 經過這麼多工序後，終於來到最後一步</p><p>就是要把source的選項改成<code>gh-pages</code>的branch,要不然你打開<code>&lt;username>.github.io</code>只有你<code>main</code> branch那個空空如也的<code>readme.md</code>
+<img src=https://i.imgur.com/wT8XOPW.png alt="github pages setting"></p><p>好了 大家快跟我一起來探討人生的意義吧
+<img src=https://i.imgur.com/gqdPPwe.png alt="My blog"></p><h1 id=reference>reference</h1><p><a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/>https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p><h1 id=thanks>thanks</h1><p>Cover photo from <a href=https://unsplash.com/photos/05wlAhC3DM4>Thomas Jensen</a></p><hr><ul class=pager><li class=previous><a href=/post/readme/ data-toggle=tooltip data-placement=top title="Clean White Theme for Hugo">&larr;
+Previous Post</a></li><li class=next><a href=/post/hello-world/ data-toggle=tooltip data-placement=top title="An Example Post">Next
+Post &rarr;</a></li></ul></div><div class="col-lg-2 col-lg-offset-0
+visible-lg-block
+sidebar-container
+catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags></div></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a target=_blank href=https://github.com/chinchio><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href rel=alternate type=application/rss+xml title="Chinchio Blog"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Chinchio Blog 2022<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(e,t){var s=document,o="script",n=s.createElement(o),i=s.getElementsByTagName(o)[0];n.src=e,t&&n.addEventListener("load",function(e){t(null,e)},!1),i.parentNode.insertBefore(n,i)}</script><script>$("#tag_cloud").length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js",function(){var e=document.querySelector("nav");e&&FastClick.attach(e)})</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-JYRLDDQD28"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-JYRLDDQD28",{anonymize_ip:!1})}</script><script type=text/javascript>function generateCatalog(e){_containerSelector="div.post-container";var t,n,s,o,i,r=$(_containerSelector),a=r.find("h1,h2,h3,h4,h5,h6");return $(e).html(""),a.each(function(){n=$(this).prop("tagName").toLowerCase(),i="#"+$(this).prop("id"),s=$(this).text(),t=$('<a href="'+i+'" rel="nofollow">'+s+"</a>"),o=$('<li class="'+n+'_nav"></li>').append(t),$(e).append(o)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(e){e.preventDefault(),$(".side-catalog").toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$(".catalog-body").onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script></body></html>
