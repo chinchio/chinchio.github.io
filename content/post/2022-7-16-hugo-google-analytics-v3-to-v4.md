@@ -61,7 +61,8 @@ googleAnalytics = "G-JYRLDDQD28"
 [templates internal #configure-google-analytics](https://gohugo.io/templates/internal/#configure-google-analytics)
 ![Hugo| template about Google Analytics](https://i.imgur.com/RjwzrfA.png)
 
-- 替換
+### 替換
+
 hugo官方的document已經告訴我們答案了，我現在使用的theme因為還在使用hugo 內建適用於`Google Analytics v3`的template，所以一直都沒有辦法使Google Analytics接收到數據
 
 所以把footer 裏面的`{{ template "_internal/google_analytics.html" . }}`更換成`{{ template "_internal/google_analytics_async.html" . }}`即可
