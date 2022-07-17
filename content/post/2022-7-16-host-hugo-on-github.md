@@ -2,7 +2,7 @@
 title:       "將Hugo網站放置在github page上"
 subtitle:    "想要擁有屬於自己的website嗎？"
 description: "教你如何建立自己的website"
-date:        2022-07-16
+date:        2022-07-16T21:22:17+08:00
 author:      "chinchio"
 image:       "https://images.unsplash.com/photo-1578728281593-a06405bf2c8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80"
 tags:        ["Hugo", "Github", "Github Actions", "Git", "Github Pages"]

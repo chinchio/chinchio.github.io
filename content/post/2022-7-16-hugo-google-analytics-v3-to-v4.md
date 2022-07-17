@@ -2,7 +2,7 @@
 title:       "為舊有的hugo theme支援Google Analytics V4"
 subtitle:    "來吧！為舊有的hugo theme程式碼做小小的修改"
 description: "來為hugo theme做小改造吧！"
-date:        2022-07-16
+date:        2022-07-16T22:23:17+08:00
 author:      "chinchio"
 image:       "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
 tags:        ["Hugo", "Google Analytics"]
