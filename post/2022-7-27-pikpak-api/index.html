@@ -36,7 +36,37 @@ post-container"><h1 id=pikpak>Pikpak</h1><h2 id=login>Login</h2><h3 id=login-wit
 </span></span><span style=display:flex><span>    <span style=color:#ff79c6>&#34;eq&#34;</span>: <span style=color:#f1fa8c>&#34;PHASE_TYPE_RUNNING&#34;</span>
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div></blockquote><ul><li>limit(int):</li></ul><blockquote><p>any interger</p></blockquote><ul><li>thumbnail_size(Str):</li></ul><blockquote><p><code>SIZE_SMALL</code> or <code>SIZE_LARGE</code></p></blockquote><ul><li>with(Str):</li></ul><blockquote><p><code>reference_resource</code></p></blockquote><hr><h1 id=更新log>更新Log</h1><ul><li>於<strong>2022-07-27T15:11:00+08:00</strong>寫了有關於Pikpak的<code>login</code>及<code>tasks</code>相關API</li></ul><hr><ul class=pager><li class=previous><a href=/post/2022-7-18-make-your-own-telegram-bot-beginner/ data-toggle=tooltip data-placement=top title="開始學習如何寫一個telegram bot(誤">&larr;
+</span></span></code></pre></div></blockquote><ul><li>limit(int):</li></ul><blockquote><p>any interger</p></blockquote><ul><li>thumbnail_size(Str):</li></ul><blockquote><p><code>SIZE_SMALL</code> or <code>SIZE_LARGE</code></p></blockquote><ul><li>with(Str):</li></ul><blockquote><p><code>reference_resource</code></p></blockquote><hr><p>Response example:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>&#34;tasks&#34;</span>: [
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;kind&#34;</span>: <span style=color:#f1fa8c>&#34;drive#task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;id&#34;</span>: <span style=color:#f1fa8c>&#34;sfdsfdsfsdfsdfdsf&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;name&#34;</span>: <span style=color:#f1fa8c>&#34;fdsafdsfsdf&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;type&#34;</span>: <span style=color:#f1fa8c>&#34;offline&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;user_id&#34;</span>: <span style=color:#f1fa8c>&#34;YR23n3213fdsfAp2BJ&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;statuses&#34;</span>: [],
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;status_size&#34;</span>: <span style=color:#bd93f9>1151</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;params&#34;</span>: {
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>&#34;url&#34;</span>: <span style=color:#f1fa8c>&#34;magnet:?xt=urn:btih:843434ad14dfdfdfdfdfa59a6ce3&#34;</span>
+</span></span><span style=display:flex><span>      },
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;file_id&#34;</span>: <span style=color:#f1fa8c>&#34;&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;file_name&#34;</span>: <span style=color:#f1fa8c>&#34;P24343423232343pl&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;file_size&#34;</span>: <span style=color:#f1fa8c>&#34;323323487391&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;message&#34;</span>: <span style=color:#f1fa8c>&#34;Storage space is not enough&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;created_time&#34;</span>: <span style=color:#f1fa8c>&#34;2022-07-20T12:11:02.140+08:00&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;updated_time&#34;</span>: <span style=color:#f1fa8c>&#34;2022-07-20T12:11:02.140+08:00&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;third_task_id&#34;</span>: <span style=color:#f1fa8c>&#34;&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;phase&#34;</span>: <span style=color:#f1fa8c>&#34;PHASE_TYPE_ERROR&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;progress&#34;</span>: <span style=color:#bd93f9>0</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;icon_link&#34;</span>: <span style=color:#f1fa8c>&#34;https://static.mypikpak.com/a1195245454545456488&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;callback&#34;</span>: <span style=color:#f1fa8c>&#34;&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;reference_resource&#34;</span>: <span style=color:#ff79c6>null</span>,
+</span></span><span style=display:flex><span>      <span style=color:#ff79c6>&#34;space&#34;</span>: <span style=color:#f1fa8c>&#34;&#34;</span>
+</span></span><span style=display:flex><span>    }],
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>&#34;next_page_token&#34;</span>: <span style=color:#f1fa8c>&#34;VM434343T43434H5sRo1&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>&#34;expires_in&#34;</span>: <span style=color:#bd93f9>10</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h1 id=更新log>更新Log</h1><ul><li>於<strong>2022-07-27T22:29:00+08:00</strong>寫了有關於Pikpak的<code>login</code>及<code>tasks</code>相關API</li><li>於<strong>2022-07-27T22:40:00+08:00</strong>補充有關於<code>tasks</code>的<code>example response</code>以及更正<strong>更新log</strong>中的時間錯誤</li></ul><hr><ul class=pager><li class=previous><a href=/post/2022-7-18-make-your-own-telegram-bot-beginner/ data-toggle=tooltip data-placement=top title="開始學習如何寫一個telegram bot(誤">&larr;
 Previous Post</a></li></ul></div><div class="col-lg-2 col-lg-offset-0
 visible-lg-block
 sidebar-container
