@@ -104,7 +104,41 @@ or
 
 ---
 
+Response example:
+```json
+{
+  "tasks": [
+    {
+      "kind": "drive#task",
+      "id": "sfdsfdsfsdfsdfdsf",
+      "name": "fdsafdsfsdf",
+      "type": "offline",
+      "user_id": "YR23n3213fdsfAp2BJ",
+      "statuses": [],
+      "status_size": 1151,
+      "params": {
+        "url": "magnet:?xt=urn:btih:843434ad14dfdfdfdfdfa59a6ce3"
+      },
+      "file_id": "",
+      "file_name": "P24343423232343pl",
+      "file_size": "323323487391",
+      "message": "Storage space is not enough",
+      "created_time": "2022-07-20T12:11:02.140+08:00",
+      "updated_time": "2022-07-20T12:11:02.140+08:00",
+      "third_task_id": "",
+      "phase": "PHASE_TYPE_ERROR",
+      "progress": 0,
+      "icon_link": "https://static.mypikpak.com/a1195245454545456488",
+      "callback": "",
+      "reference_resource": null,
+      "space": ""
+    }],
+    "next_page_token": "VM434343T43434H5sRo1",
+    "expires_in": 10
+}
+```
 
 
 # 更新Log
-- 於**2022-07-27T15:11:00+08:00**寫了有關於Pikpak的`login`及`tasks`相關API
+- 於**2022-07-27T22:29:00+08:00**寫了有關於Pikpak的`login`及`tasks`相關API
+- 於**2022-07-27T22:40:00+08:00**補充有關於`tasks`的`example response`以及更正**更新log**中的時間錯誤
