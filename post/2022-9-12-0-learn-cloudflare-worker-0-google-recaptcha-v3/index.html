@@ -97,7 +97,8 @@ post-container"><h1 id=引言>引言</h1><p>由於本人近日有閱讀一本有
 <img src=https://i.imgur.com/fm04bm9.png alt="demo index"></p><p>而如果timeout或者reCaptcha v3認為你不是人為操作就會顯示類似如下(下圖是timeout所致)
 <img src=https://i.imgur.com/k3rEmeU.png alt="not success with google recaptcha v3 challenge"></p><p>如果檢測是人為操作便會有像下圖的顯示
 <img src=https://i.imgur.com/RC5Ii0X.png alt="success with google recaptcha v3 challenge"></p><p>值得注意的是本人寫的程式去檢驗是否人機是由recaptcha v3的verify的<code>success</code>(bool) value來決定，我暫時沒有辦法找到recaptcha v3 document裏面有提及<code>score</code>多少才決定<code>success</code>才為true，當然您也可以透過<code>score</code>來的值來決定是否把該操作視為人為。</p><h1 id=demo-link>Demo Link</h1><p><a href=https://google-recaptcha-v3-demo.cf-learn.workers.dev/>cloudflare worker - google recaptcha v3 demo</a></p><p>#reference:</p><ul><li><a href=https://remotestack.io/how-to-add-google-recaptcha-v3-in-node-js-app/>How to Add Google ReCaptcha v3 in Node Js App</a></li><li><a href=https://developers.google.com/recaptcha/docs/v3>reCAPTCHA v3 | Google Developers</a></li><li><a href=https://developers.cloudflare.com/workers/examples/read-post/>Read POST | Cloudflare Workers docs</a></li><li><a href=https://developers.cloudflare.com/workers/examples/fetch-json/>Fetch JSON | Cloudflare Workers docs</a></li></ul><hr><ul class=pager><li class=previous><a href=/post/2022-8-30-0-install-code-server-on-ubuntu/ data-toggle=tooltip data-placement=top title=利用code-server實現在browser裏面寫code>&larr;
-Previous Post</a></li></ul></div><div class="col-lg-2 col-lg-offset-0
+Previous Post</a></li><li class=next><a href=/post/2022-10-11-0-get-pull-rtmp-url/ data-toggle=tooltip data-placement=top title="截取RTMP URL">Next
+Post &rarr;</a></li></ul></div><div class="col-lg-2 col-lg-offset-0
 visible-lg-block
 sidebar-container
 catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
