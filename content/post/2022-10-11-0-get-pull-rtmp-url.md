@@ -6,7 +6,7 @@ date:        2022-10-11T21:12:55+08:00
 author:      "chinchio"
 image:       "https://images.unsplash.com/photo-1522327646852-4e28586a40dd?ixlib=rb-1.2.1&dl=nicolas-lb-uVSyr0EUaLY-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb"
 tags:        ["RTMP", "FFMPEG"]
-categories:  ["Tech" ]
+categories:  ["Tech"]
 ---
 
 # 前言
