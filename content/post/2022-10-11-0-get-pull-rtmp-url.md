@@ -5,7 +5,7 @@ description: "學習使用pyshark來獲取及取得封包資訊"
 date:        2022-10-11T21:12:55+08:00
 author:      "chinchio"
 image:       "https://images.unsplash.com/photo-1522327646852-4e28586a40dd?ixlib=rb-1.2.1&dl=nicolas-lb-uVSyr0EUaLY-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb"
-tags:        ["RTMP", "FFMPEG"]
+tags:        ["RTMP", "Wireshark", "Pyshark"]
 categories:  ["Tech"]
 ---
 
@@ -27,7 +27,7 @@ categories:  ["Tech"]
 
 # 截取封包
 
-但幸好，本人此次要截取的直播App是用`RTMP`進行串流，只需簡單在`Wireshark` filter加上 `RTMP`字樣即可。
+但幸好，本人此次要截取的直播App是用`RTMP`進行串流，只需簡單在`Wireshark` filter加上 `RTMPT`字樣即可。
 
 ![Using `RTMP` filter on `Wireshark`](https://i.imgur.com/Sa4rdSJ.png)
 
