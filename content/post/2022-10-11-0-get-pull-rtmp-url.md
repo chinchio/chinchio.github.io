@@ -10,7 +10,7 @@ categories:  ["Tech"]
 ---
 
 # 前言
-相信各位都有首先直播的經驗，不管是VTuber、或者看玩家在Twitch或Youtube上面分享遊戲實況。
+相信各位都有觀看直播的經驗，不管是VTuber、或者看玩家在Twitch或Youtube上面分享遊戲實況。
 
 而據我所知Youtube, Facebook 及 Twitch都是透過`RTMP` protocol來把畫面串流到它們的主機上。
 
