@@ -55,10 +55,12 @@ i hope you didnt translate it by hand. thats what computers are for. doiog it in
 ![](https://i.imgur.com/VytEGxS.png)
 
 明顯就是叫你去看source code
-Source如下：
+
+Source code被我備份放在了Github Gist內：
 [decoding-challenge-level-2-suse-wechat | Github Gist](https://gist.github.com/chinchio/2c85b12c2e5d96f1e4371458822df90e#file-decoding-challenge-level-2-suse-wechat-html)
 
 > 在下面的乱码中找到稀有字母。找到这些字母后，将他们按照顺序拼接起来就可以获取到答案(这些字母都是大写呦)！
+>
 > 然后将获取到的单词替换掉浏览器中的 "InnovateEverywhere"，即可获取通关密码！
 
 [Decoding Challenge Level 2 | SUSE 1024 Event (2022-10-20)](https://i.imgur.com/GMGHwVQ.png)
@@ -78,7 +80,7 @@ Pattern: `\W|_`
 ![](https://i.imgur.com/qx6Lg74.png)
 但這樣看還是很傷眼
 
-因為我這台電腦沒有安裝notepad++，所以用了線上工具來幫我進行regex expression replace(Regex Replace Online Tool - Coding.Tools)[https://coding.tools/regex-replace]
+因為我這台電腦沒有安裝notepad++，所以用了線上工具來幫我進行regex expression replace[Regex Replace Online Tool - Coding.Tools](https://coding.tools/regex-replace)
 ![](https://i.imgur.com/zXu67Vv.png)
 
 好吧，答案呼之欲出 就是~~`SUSERANCHER`~~
@@ -87,6 +89,7 @@ Pattern: `\W|_`
 
 ### 把大寫的英文字找出來就好了
 好了，再補充另外一種做法，但這個要自己去慢慢把答案組成字串，有點麻煩
+
 已知`[A-Z]`意思是把大寫的英文字母找出來，那就把答案找了出來啦！
 ![](https://i.imgur.com/9Tt7hd5.png)
 ![](https://i.imgur.com/2ZWhuKW.png)
