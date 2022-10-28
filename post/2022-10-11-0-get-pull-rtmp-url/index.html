@@ -20,7 +20,8 @@ post-container"><h1 id=前言>前言</h1><p>相信各位都有觀看直播的經
     if &#34;RTMP Body&#34; in rtmpt._all_fields:
         rtmp_body = rtmpt._all_fields[&#34;RTMP Body&#34;]
 </code></pre><p>我私心認為最重要的程式碼莫過於line 4的<code>rtmpt._all_fields</code>，但如果沒有配合capture封包用<code>json</code>方式顯示出來，一切都前功盡廢。</p><p>上述程式碼簡單來說就是把封包裏面的<code>Application layer</code>的<code>RTMP</code> data抓取出來，看看有沒有符合特徵的，有就取出進行邏輯判斷，像line 4 及 line 5就是判斷<code>"RTMP Body"</code>在不在這次抓取的<code>RTMP</code>封包裏面。</p><hr><ul class=pager><li class=previous><a href=/post/2022-9-12-0-learn-cloudflare-worker-0-google-recaptcha-v3/ data-toggle=tooltip data-placement=top title="Google reCAPTCHA v3學習之路 (0)">&larr;
-Previous Post</a></li></ul></div><div class="col-lg-2 col-lg-offset-0
+Previous Post</a></li><li class=next><a href=/post/2022-10-28-0-suse-1024-decode-challenge/ data-toggle=tooltip data-placement=top title="SUSE 遊戲解題">Next
+Post &rarr;</a></li></ul></div><div class="col-lg-2 col-lg-offset-0
 visible-lg-block
 sidebar-container
 catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2

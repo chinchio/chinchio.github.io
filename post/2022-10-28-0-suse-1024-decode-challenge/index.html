@@ -1,0 +1,52 @@
+<!doctype html><html lang=zh-tw><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Chinchio Blog"><meta property="og:type" content="article"><meta property="og:image" content="https://chinchio.github.io//img/home-bg-jeep.jpg"><meta property="twitter:image" content="https://chinchio.github.io//img/home-bg-jeep.jpg"><meta name=title content="SUSE 遊戲解題"><meta property="og:title" content="SUSE 遊戲解題"><meta property="twitter:title" content="SUSE 遊戲解題"><meta name=description content="描述1024解謎遊戲的思路"><meta property="og:description" content="描述1024解謎遊戲的思路"><meta property="twitter:description" content="描述1024解謎遊戲的思路"><meta property="twitter:card" content="summary"><meta name=keyword content="Program, Game"><link rel="shortcut icon" href=/img/favicon.ico><title>SUSE 遊戲解題 | Chinchio Blog</title><link rel=canonical href=/post/2022-10-28-0-suse-1024-decode-challenge/><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css><link rel=stylesheet href=/css/zanshang.css><link href=https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Chinchio Blog</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>All Posts</a></li><li><a href=/categories/music>music</a></li><li><a href=/categories/tech>tech</a></li><li><a href=/archive/>ARCHIVE</a></li><li><a href=/notes/>NOTES</a></li><li><a href=/about/>ABOUT</a></li><li><a href=/search><i class="fa fa-search"></i></a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic);function handleMagic(){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&dl=desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/tags/suse title=SUSE>SUSE</a>
+<a class=tag href=/tags/1024 title=1024>1024</a>
+<a class=tag href=/tags/game title=game>game</a></div><h1>SUSE 遊戲解題</h1><h2 class=subheading>Wechat SUSE的1024解謎遊戲</h2><span class=meta>Posted by
+    "chinchio"
+on
+Friday, October 28, 2022</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+post-container"><h1 id=suse-遊戲解題>SUSE 遊戲解題</h1><p>看完RACHER相關的線上課程後，主持人說SUSE有一個1024活動的小遊戲，那就去玩玩吧</p><p><img src=https://i.imgur.com/50hDtm0.png alt></p><hr><p>那個鏈結的網站是<a href=https://games.rancher.cn/begin.html>Decoding Challenge Level 1</a>
+避免活動結束被關了，所以我在<a href=http://web.archive.org/web/20221020132226/https://games.rancher.cn/begin.html>web.archive 也做了備份</a>，可以體驗一下當時的樂趣</p><h1 id=解題思路>解題思路</h1><h2 id=challenge-level-1>Challenge Level 1</h2><p><img src=https://i.imgur.com/sP1pjyx.png alt></p><p>其實看到SUSE活動的描述圖，我已經猜到是跟<code>rot13</code>有關
+因為看到了<strong>凱撒</strong>大帝在說話了
+如果不知道甚麼是<code>rot13</code>，可以去看看<a href=https://zh.wikipedia.org/wiki/ROT13>ROT13 - 維基百科，自由的百科全書</a>
+<img src=https://i.imgur.com/1n7RXot.jpg alt></p><p>那如何解題呢？
+看到<code>key=2</code>了嗎，那可能的解題方式就只有<code>rot2</code>或<code>rot24</code>了</p><p>配合<a href=https://rot13.com/>rot13.com</a>，只要把字串貼上去就有答案了</p><p><img src=https://i.imgur.com/TRtomX4.png alt></p><pre tabindex=0><code class=language-text! data-lang=text!>i hope you didnt translate it by hand. thats what computers are for. doiog it in by hand is inefficient and that&#39;s why this text is so long. please replace &#34;begio&#34; in your browser with &#34;InnovateEverywhere&#34; and move on to the next level.
+</code></pre><blockquote><p>大意就是叫你不要這麼笨一個一個用手去做字母位移，電腦就是用來做這些重覆無聊的工作，這段字這麼長就是要避免你用這麼笨的方式來算出答案。將link裏面的<code>begio</code>替代成<code>InnovateEverywhere</code>就可以到下一題啦！</p></blockquote><h2 id=challenge-level-2>Challenge Level 2</h2><p>有注意到SUSE簡介有叫你用PC更容易找到答案嗎？
+因為Challenge Level 1 的 URL 就是 <code>https://games.rancher.cn/begin.html</code></p><p>那下一關的鏈結明顯就是<code>https://games.rancher.cn/InnovateEverywhere.html</code>了</p><p>進入到第二關後<a href=https://games.rancher.cn/InnovateEverywhere.html>Decoding Challenge Level 2</a>
+<a href=http://web.archive.org/web/20221020133634/https://games.rancher.cn/InnovateEverywhere.html>Decoding Challenge Level 2 | WebArchive</a></p><p>可以看到這張圖片
+<img src=https://i.imgur.com/VytEGxS.png alt></p><p>明顯就是叫你去看source code
+Source如下：
+<a href=https://gist.github.com/chinchio/2c85b12c2e5d96f1e4371458822df90e#file-decoding-challenge-level-2-suse-wechat-html>decoding-challenge-level-2-suse-wechat | Github Gist</a></p><blockquote><p>在下面的乱码中找到稀有字母。找到这些字母后，将他们按照顺序拼接起来就可以获取到答案(这些字母都是大写呦)！
+然后将获取到的单词替换掉浏览器中的 &ldquo;InnovateEverywhere&rdquo;，即可获取通关密码！</p></blockquote><p><a href=https://i.imgur.com/GMGHwVQ.png>Decoding Challenge Level 2 | SUSE 1024 Event (2022-10-20)</a></p><p>那很明顯就是指這些符號中隱藏了一些大寫英文Char</p><p>那思路就很明顯了</p><ol><li>只要把不是大寫字符的東西找出來刪掉就行了</li><li>只要把大寫的英文字找出來就好了</li></ol><h3 id=把不是大寫字符的東西找出來刪掉>把不是大寫字符的東西找出來刪掉</h3><p>那這種方式只要透過<code>regular expression</code>即可解決
+真的是piece of cake
+Pattern: <code>\W|_</code>
+<img src=https://i.imgur.com/GcELYOP.png alt>
+其實白色沒有被選取的字就已經是答案了
+<img src=https://i.imgur.com/qx6Lg74.png alt>
+但這樣看還是很傷眼</p><p>因為我這台電腦沒有安裝notepad++，所以用了線上工具來幫我進行regex expression replace(Regex Replace Online Tool - Coding.Tools)[https://coding.tools/regex-replace]
+<img src=https://i.imgur.com/zXu67Vv.png alt></p><p>好吧，答案呼之欲出 就是~~<code>SUSERANCHER</code>~~</p><p>那根據剛才Level 1 到 Level 2的原理，不難猜到下一個Level 的URL是</p><h3 id=把大寫的英文字找出來就好了>把大寫的英文字找出來就好了</h3><p>好了，再補充另外一種做法，但這個要自己去慢慢把答案組成字串，有點麻煩
+已知<code>[A-Z]</code>意思是把大寫的英文字母找出來，那就把答案找了出來啦！
+<img src=https://i.imgur.com/9Tt7hd5.png alt>
+<img src=https://i.imgur.com/2ZWhuKW.png alt>
+好吧，把上述的字慢慢打出來好了</p><h2 id=暫時的勝利>暫時的勝利（？</h2><p>學無止境可能會比較配合這個語景
+<img src=https://i.imgur.com/8lzcPcV.png alt>
+<a href=https://games.rancher.cn/SUSERANCHER.html>Temporary End</a>
+<a href=http://web.archive.org/web/20221020134857/https://games.rancher.cn/SUSERANCHER.html>Temporary End | WebArchive</a></p><p>這樣就通關了，因為說了不要把驗證碼分享給任何人，那我只要把他蓋掉好了</p><hr><ul class=pager><li class=previous><a href=/post/2022-10-11-0-get-pull-rtmp-url/ data-toggle=tooltip data-placement=top title="截取RTMP URL">&larr;
+Previous Post</a></li></ul></div><div class="col-lg-2 col-lg-offset-0
+visible-lg-block
+sidebar-container
+catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags><a href=/tags/hugo title=hugo>hugo</a>
+<a href=/tags/spotify title=spotify>spotify</a></div></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a target=_blank href=https://github.com/chinchio><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href rel=alternate type=application/rss+xml title="Chinchio Blog"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Chinchio Blog 2022<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(e,t){var s=document,o="script",n=s.createElement(o),i=s.getElementsByTagName(o)[0];n.src=e,t&&n.addEventListener("load",function(e){t(null,e)},!1),i.parentNode.insertBefore(n,i)}</script><script>$("#tag_cloud").length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js",function(){var e=document.querySelector("nav");e&&FastClick.attach(e)})</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-JYRLDDQD28"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-JYRLDDQD28",{anonymize_ip:!1})}</script><script type=text/javascript>function generateCatalog(e){_containerSelector="div.post-container";var t,n,s,o,i,a=$(_containerSelector),r=a.find("h1,h2,h3,h4,h5,h6");return $(e).html(""),r.each(function(){t=$(this).prop("tagName").toLowerCase(),o="#"+$(this).prop("id"),n=$(this).text(),i=$('<a href="'+o+'" rel="nofollow">'+n+"</a>"),s=$('<li class="'+t+'_nav"></li>').append(i),$(e).append(s)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(e){e.preventDefault(),$(".side-catalog").toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$(".catalog-body").onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script></body></html>
