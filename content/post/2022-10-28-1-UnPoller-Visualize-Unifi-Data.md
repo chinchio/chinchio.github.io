@@ -173,14 +173,16 @@ influx -username {USERNAME} -password {PASSWORD}
 ---
 
 # 設定`Grafana` Dashboard
-既然都設定好了
+既然前面都設定好了，那按下來就只剩下加dashboard了
 ![Dashboard| new > import](https://i.imgur.com/crPWNY2.png)
 
-這裏我用官方的"10419"來做測試
+這裏我用官方的"10419" dashboard 來做測試
 ![Setup Grafana | Un Poller `Grafana` dashboard](https://i.imgur.com/dfHB3Aq.png)
 
 ![import dashboard "10419"](https://i.imgur.com/S577k3H.png)
-[https://unpoller.com/docs/install/grafana/]
+> 可以在這裏找到官方提供的dashboard
+> 
+> [Setup Grafana | Un Poller](https://unpoller.com/docs/install/grafana/)
 
 ![UniFi-Poller: Client DPI - InfluxDB](https://i.imgur.com/fd1VPvW.png)
 
