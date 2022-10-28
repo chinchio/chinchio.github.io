@@ -21,18 +21,15 @@ post-container"><h1 id=suse-遊戲解題>SUSE 遊戲解題</h1><p>看完RACHER�
 </code></pre><blockquote><p>大意就是叫你不要這麼笨一個一個用手去做字母位移，電腦就是用來做這些重覆無聊的工作，這段字這麼長就是要避免你用這麼笨的方式來算出答案。將link裏面的<code>begio</code>替代成<code>InnovateEverywhere</code>就可以到下一題啦！</p></blockquote><h2 id=challenge-level-2>Challenge Level 2</h2><p>有注意到SUSE簡介有叫你用PC更容易找到答案嗎？
 因為Challenge Level 1 的 URL 就是 <code>https://games.rancher.cn/begin.html</code></p><p>那下一關的鏈結明顯就是<code>https://games.rancher.cn/InnovateEverywhere.html</code>了</p><p>進入到第二關後<a href=https://games.rancher.cn/InnovateEverywhere.html>Decoding Challenge Level 2</a>
 <a href=http://web.archive.org/web/20221020133634/https://games.rancher.cn/InnovateEverywhere.html>Decoding Challenge Level 2 | WebArchive</a></p><p>可以看到這張圖片
-<img src=https://i.imgur.com/VytEGxS.png alt></p><p>明顯就是叫你去看source code
-Source如下：
-<a href=https://gist.github.com/chinchio/2c85b12c2e5d96f1e4371458822df90e#file-decoding-challenge-level-2-suse-wechat-html>decoding-challenge-level-2-suse-wechat | Github Gist</a></p><blockquote><p>在下面的乱码中找到稀有字母。找到这些字母后，将他们按照顺序拼接起来就可以获取到答案(这些字母都是大写呦)！
-然后将获取到的单词替换掉浏览器中的 &ldquo;InnovateEverywhere&rdquo;，即可获取通关密码！</p></blockquote><p><a href=https://i.imgur.com/GMGHwVQ.png>Decoding Challenge Level 2 | SUSE 1024 Event (2022-10-20)</a></p><p>那很明顯就是指這些符號中隱藏了一些大寫英文Char</p><p>那思路就很明顯了</p><ol><li>只要把不是大寫字符的東西找出來刪掉就行了</li><li>只要把大寫的英文字找出來就好了</li></ol><h3 id=把不是大寫字符的東西找出來刪掉>把不是大寫字符的東西找出來刪掉</h3><p>那這種方式只要透過<code>regular expression</code>即可解決
+<img src=https://i.imgur.com/VytEGxS.png alt></p><p>明顯就是叫你去看source code</p><p>Source code被我備份放在了Github Gist內：
+<a href=https://gist.github.com/chinchio/2c85b12c2e5d96f1e4371458822df90e#file-decoding-challenge-level-2-suse-wechat-html>decoding-challenge-level-2-suse-wechat | Github Gist</a></p><blockquote><p>在下面的乱码中找到稀有字母。找到这些字母后，将他们按照顺序拼接起来就可以获取到答案(这些字母都是大写呦)！</p><p>然后将获取到的单词替换掉浏览器中的 &ldquo;InnovateEverywhere&rdquo;，即可获取通关密码！</p></blockquote><p><a href=https://i.imgur.com/GMGHwVQ.png>Decoding Challenge Level 2 | SUSE 1024 Event (2022-10-20)</a></p><p>那很明顯就是指這些符號中隱藏了一些大寫英文Char</p><p>那思路就很明顯了</p><ol><li>只要把不是大寫字符的東西找出來刪掉就行了</li><li>只要把大寫的英文字找出來就好了</li></ol><h3 id=把不是大寫字符的東西找出來刪掉>把不是大寫字符的東西找出來刪掉</h3><p>那這種方式只要透過<code>regular expression</code>即可解決
 真的是piece of cake
 Pattern: <code>\W|_</code>
 <img src=https://i.imgur.com/GcELYOP.png alt>
 其實白色沒有被選取的字就已經是答案了
 <img src=https://i.imgur.com/qx6Lg74.png alt>
-但這樣看還是很傷眼</p><p>因為我這台電腦沒有安裝notepad++，所以用了線上工具來幫我進行regex expression replace(Regex Replace Online Tool - Coding.Tools)[https://coding.tools/regex-replace]
-<img src=https://i.imgur.com/zXu67Vv.png alt></p><p>好吧，答案呼之欲出 就是~~<code>SUSERANCHER</code>~~</p><p>那根據剛才Level 1 到 Level 2的原理，不難猜到下一個Level 的URL是</p><h3 id=把大寫的英文字找出來就好了>把大寫的英文字找出來就好了</h3><p>好了，再補充另外一種做法，但這個要自己去慢慢把答案組成字串，有點麻煩
-已知<code>[A-Z]</code>意思是把大寫的英文字母找出來，那就把答案找了出來啦！
+但這樣看還是很傷眼</p><p>因為我這台電腦沒有安裝notepad++，所以用了線上工具來幫我進行regex expression replace<a href=https://coding.tools/regex-replace>Regex Replace Online Tool - Coding.Tools</a>
+<img src=https://i.imgur.com/zXu67Vv.png alt></p><p>好吧，答案呼之欲出 就是~~<code>SUSERANCHER</code>~~</p><p>那根據剛才Level 1 到 Level 2的原理，不難猜到下一個Level 的URL是</p><h3 id=把大寫的英文字找出來就好了>把大寫的英文字找出來就好了</h3><p>好了，再補充另外一種做法，但這個要自己去慢慢把答案組成字串，有點麻煩</p><p>已知<code>[A-Z]</code>意思是把大寫的英文字母找出來，那就把答案找了出來啦！
 <img src=https://i.imgur.com/9Tt7hd5.png alt>
 <img src=https://i.imgur.com/2ZWhuKW.png alt>
 好吧，把上述的字慢慢打出來好了</p><h2 id=暫時的勝利>暫時的勝利（？</h2><p>學無止境可能會比較配合這個語景
