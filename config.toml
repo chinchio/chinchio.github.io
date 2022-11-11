@@ -13,7 +13,7 @@ hasCJKLanguage = true
 home = ["HTML", "RSS"]
 
 [params]
-  header_image = "img/home-bg-jeep.jpg"
+  header_image = "img/Yanping-Riverside-Park-sunset.jpg"
   SEOTitle = "Chinchio Blog"
   description = "尋找人生目的"
   keyword = "Program, Game"
