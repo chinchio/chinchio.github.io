@@ -69,7 +69,7 @@ home = ["HTML", "RSS"]
   [params.social]
   rss            = true 
   #email          = "youremail@gmail.com"
-  #facebook      = "full profile url in facebook"
+  facebook      = "https://www.facebook.com/profile.php?id=100087271581131"
   #googleplus    = "full profile url in googleplus"
   #twitter       = "full profile url in twitter"
   #linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
